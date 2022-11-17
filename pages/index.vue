@@ -15,7 +15,7 @@ const { data } = await useFetch('/api/tickers?limit=10')
         <th>Details</th>
       </tr>
       </thead>
-      <tr v-for="currency in data.data" :key="data.data.id">
+      <tr v-for="currency in data.data" :key="currency.id">
         <td>{{ currency.name }}</td>
         <td>{{ currency.symbol }}</td>
         <td>{{ currency.price_usd }}</td>
